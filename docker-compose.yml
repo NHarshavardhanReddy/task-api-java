@@ -1,0 +1,13 @@
+services:
+  api:
+    build: .
+    ports:
+      - "8081:8081"
+    environment:
+      APP_USERNAME: admin
+      APP_PASSWORD: admin123
+      JWT_SECRET: change-me-to-a-long-random-string-0123456789
+    volumes:
+      - task-data:/data
+volumes:
+  task-data:
